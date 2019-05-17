@@ -1,0 +1,16 @@
+def narcisistic_number(number):
+    number_string = str(number)
+    exponent = len(list(number_string))
+    number_string_list = list(number_string)
+    digit_list = []
+    for digit in number_string_list:
+        integer_digit = int(digit)
+        digit_list.append(integer_digit)
+    new_digit_list = []
+    for digit in digit_list:
+        new_digit = digit**exponent
+        new_digit_list.append(new_digit)
+    if sum(new_digit_list) == number:
+        return True
+    else:
+        return False
