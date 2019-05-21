@@ -1,8 +1,9 @@
-def second_best (n, arr)
-    arr = []
+def second_best(n, arr):
+    n = len(arr)
     arr_sorted = sorted(arr, reverse=True)
-    first_score = max(arr_sorted)
     set_arr_sorted = set(arr_sorted)
-    modified_set_arr_sorted = set_cdslckldkcarr_sorted - first_score
-    second_best = max(modified_set_arr_sorted)
+    list_unsorted = list(set_arr_sorted)
+    list_sorted = sorted(list_unsorted, reverse = True)
+    second_best = list_sorted[1]
+    return second_best
     print (second_best)
